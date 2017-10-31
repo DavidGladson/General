@@ -1,0 +1,43 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+template<typename T> void print2dvec(T& vec);
+template<typename T> void print2dvec2(T& vec);
+int main()
+{
+
+    vector< vector<int> > vect{{1, 2, 3},
+                              {4, 5, 6},
+                              {7, 8, 9}};
+    print2dvec(vect);    
+    print2dvec2(vect);
+                              
+}
+
+template<typename T> void print2dvec(T& vec)
+{
+  vector<vector<int>>::iterator row;
+  vector<int> :: iterator col;
+  
+  for(row=vec.begin();row!=vec.end();row++)
+  {
+    for(col=row->begin();col!=row->end();col++)
+    {
+      cout << *col << " ";
+    }
+    cout << endl;
+  }
+}
+
+template<typename T> void print2dvec2(T& vec)
+{
+  for(int i=0;i<vec.size();++i)
+  {
+    for(int j=0;j<vec[i].size();++j)
+    {
+      cout << vec[i][j] << " ";
+    }
+    cout << endl;
+  }
+}
